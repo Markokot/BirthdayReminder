@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "password": "1232",
+      "isAdmin": true
+    }
+  ],
+  "friendsData": {
+    "admin": []
+  }
+}
