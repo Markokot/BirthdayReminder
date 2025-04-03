@@ -353,7 +353,6 @@ function App() {
         <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 mb-6">
           <div className="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-4">
             <div className="flex items-center gap-4">
-              <h1 className="text-2xl font-bold">Дни рождения</h1>
               <LoginForm
                 username={loginUsername}
                 password={loginPassword}

@@ -38,32 +38,34 @@ export const LoginForm: React.FC<LoginFormProps> = ({
   }
 
   return (
-    <div className="bg-white p-6 md:p-8 rounded-lg shadow-xl w-full max-w-md">
+    <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-md mx-auto">
       <div className="flex items-center justify-center mb-6">
         <Lock className="w-12 h-12 text-blue-500" />
       </div>
       <h1 className="text-2xl font-bold text-center mb-6">Дни рождения</h1>
-      <input
-        type="text"
-        value={username}
-        onChange={(e) => onUsernameChange(e.target.value)}
-        placeholder="Имя пользователя"
-        className="w-full px-4 py-2 border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => onPasswordChange(e.target.value)}
-        onKeyDown={(e) => e.key === 'Enter' && onLogin()}
-        placeholder="Пароль"
-        className="w-full px-4 py-2 border rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
-      />
-      <button
-        onClick={onLogin}
-        className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors"
-      >
-        Войти
-      </button>
+      <div className="space-y-4">
+        <input
+          type="text"
+          value={username}
+          onChange={(e) => onUsernameChange(e.target.value)}
+          placeholder="Имя пользователя"
+          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => onPasswordChange(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && onLogin()}
+          placeholder="Пароль"
+          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button
+          onClick={onLogin}
+          className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors"
+        >
+          Войти
+        </button>
+      </div>
     </div>
   );
 };
