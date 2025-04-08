@@ -3,8 +3,6 @@ import { Gift, PartyPopper, Edit, Trash2, Save, X as CloseIcon } from 'lucide-re
 import { Friend } from '../../types';
 import { formatDate } from '../../utils/dateUtils';
 
-import { Friend } from '../../types';
-
 interface FriendListProps {
   friends: Friend[];
   editingFriend: Friend | null;
