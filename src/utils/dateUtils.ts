@@ -8,8 +8,9 @@ export const formatDate = (dateStr: string) => {
 };
 
 export const getBirthdayDates = (friends: { birthday: string }[]) => {
+  const currentYear = new Date().getFullYear();
   return friends.map(friend => {
     const [day, month] = friend.birthday.split('-');
-    return new Date(2024, parseInt(month) - 1, parseInt(day));
+    return new Date(currentYear, parseInt(month) - 1, parseInt(day));
   });
 };
