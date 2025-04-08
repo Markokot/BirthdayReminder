@@ -39,8 +39,8 @@ export const LoginForm: React.FC<LoginFormProps> = ({
   }
 
   return (
-    <div className="min-h-[calc(100vh-8rem)] flex items-center justify-center w-full">
-      <div className="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md">
+    <div className="fixed inset-0 flex items-center justify-center bg-gray-100">
+      <div className="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md mx-auto">
         <div className="flex flex-col items-center gap-6">
           <div className="bg-blue-100 p-4 rounded-full">
             <Lock className="w-8 h-8 text-blue-500" />
