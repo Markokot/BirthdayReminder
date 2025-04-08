@@ -39,33 +39,37 @@ export const LoginForm: React.FC<LoginFormProps> = ({
   }
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-md mx-auto">
-      <div className="flex items-center justify-center mb-6">
-        <Lock className="w-12 h-12 text-blue-500" />
-      </div>
-      <h1 className="text-2xl font-bold text-center mb-6">Дни рождения</h1>
-      <div className="space-y-4">
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => onUsernameChange(e.target.value)}
-          placeholder="Имя пользователя"
-          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => onPasswordChange(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && onLogin()}
-          placeholder="Пароль"
-          className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-        <button
-          onClick={onLogin}
-          className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors"
-        >
-          Войти
-        </button>
+    <div className="min-h-[calc(100vh-8rem)] flex items-center justify-center">
+      <div className="bg-white p-8 rounded-xl shadow-2xl w-full max-w-md mx-auto">
+        <div className="flex flex-col items-center gap-6">
+          <div className="bg-blue-100 p-4 rounded-full">
+            <Lock className="w-8 h-8 text-blue-500" />
+          </div>
+          <h1 className="text-2xl font-bold text-gray-800">Дни рождения</h1>
+          <div className="w-full space-y-4">
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => onUsernameChange(e.target.value)}
+              placeholder="Имя пользователя"
+              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+            />
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => onPasswordChange(e.target.value)}
+              onKeyDown={(e) => e.key === 'Enter' && onLogin()}
+              placeholder="Пароль"
+              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+            />
+            <button
+              onClick={onLogin}
+              className="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition-all font-medium"
+            >
+              Войти
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
